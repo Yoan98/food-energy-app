@@ -41,15 +41,24 @@ npx expo start
 
 ### 构建生产版本
 ```bash
-# 构建 iOS 应用
-npx expo build:ios
+# 安装 EAS CLI（如果还没安装）
+npm install -g @expo/eas-cli
 
-# 构建 Android 应用
-npx expo build:android
+# 登录 Expo 账户
+eas login
 
-# 或者使用新的 EAS Build
-npx eas build --platform ios
-npx eas build --platform android
+# 云端构建
+# 构建预览版本（生成 APK）
+eas build --platform android --profile preview
+
+# 构建生产版本
+eas build --platform android --profile production
+
+# 构建 iOS 版本
+eas build --platform ios --profile production
+
+# 本地构建
+
 ```
 
 ## 使用说明

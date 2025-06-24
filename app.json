@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Food Energy WebView App",
+    "name": "Food Energy",
     "slug": "food-energy-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,8 +16,10 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "此应用需要相机权限来支持网页中的摄像功能",
-        "NSMicrophoneUsageDescription": "此应用需要麦克风权限来支持网页中的音频功能"
-      }
+        "NSMicrophoneUsageDescription": "此应用需要麦克风权限来支持网页中的音频功能",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.yoanhuang.foodenergyapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -31,8 +33,10 @@
         "android.permission.INTERNET"
       ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "fcbb4717-8c58-450f-ab90-21945ccd5302"
+      }
     }
   }
 }
