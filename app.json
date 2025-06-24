@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "food-energy-app",
+    "name": "Food Energy WebView App",
     "slug": "food-energy-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,14 +13,23 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "此应用需要相机权限来支持网页中的摄像功能",
+        "NSMicrophoneUsageDescription": "此应用需要麦克风权限来支持网页中的音频功能"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
